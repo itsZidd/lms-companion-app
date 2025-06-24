@@ -1,6 +1,11 @@
 # LMS Companion App
 
-A Learning Management System companion application built with [Next.js](https://nextjs.org) and bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+A Learning Management System companion application built with [Next.js](https://nextjs.org).
+## Screenshots
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/6d6c46e2-f883-495a-9433-d6b5137dd536" alt="Landing Page" width="500">
+  <p><em>Landing Page</em></p>
+</div>
 
 ## Getting Started
 
@@ -40,7 +45,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 - Modern Next.js 14+ with App Router
 - TypeScript support
 - Drizzle ORM for database management
-- Optimized fonts with `next/font` (Geist font family)
+- Optimized fonts with `next/font`
 - Component-based architecture
 
 ## Project Structure
