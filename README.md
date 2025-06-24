@@ -38,8 +38,6 @@ A Learning Management System companion application built with [Next.js](https://
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
 ## Features
 
 - Modern Next.js 14+ with App Router
