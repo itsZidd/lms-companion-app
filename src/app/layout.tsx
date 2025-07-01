@@ -3,7 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const myFont = localFont({
+const dyslexic = localFont({
   src: "./fonts/OpenDyslexic-Regular.woff2",
 });
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className={myFont.className}>
+      <body className={dyslexic.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
