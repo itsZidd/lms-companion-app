@@ -27,7 +27,7 @@ const Menu = ({ orientation }: MenuProps) => {
                                 className={cn(
                                     "rounded-xl flex gap-2 py-2 px-4 items-center transition-all",
                                     section == menuItem.path
-                                        ? "bg-white text-black dark:bg-black dark:text-white hover:bg-white/80 dark:hover:bg-black/80"
+                                        ? "bg-slate-700 text-white hover:bg-slate-800"
                                         : "text-muted-foreground hover:bg-muted-foreground/10",
                                 )}
                                 key={menuItem.id}
