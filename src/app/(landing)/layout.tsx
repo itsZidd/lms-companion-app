@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import LandingPageNavBar from './_components/navbar';
 
@@ -7,7 +9,7 @@ type Props = {
 
 const layout = ({ children }: Props) => {
   return (
-    <div className='flex flex-col px-5 container'>
+    <div className='flex flex-col px-5'>
       <LandingPageNavBar />
       {children}
     </div>

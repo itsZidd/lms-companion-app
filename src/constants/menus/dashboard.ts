@@ -1,12 +1,12 @@
 import { LayoutDashboard, Settings, CreditCard } from "lucide-react"
 
-export type MenuItem = {
+export type DashboardMenuItem = {
     name: string
     icon: React.ElementType
     href: string
 }
 
-export const menuOptions: MenuItem[] = [
+export const DASHBOARD_PAGE_MENU: DashboardMenuItem[] = [
     {
         name: "Dashboard",
         icon: LayoutDashboard,

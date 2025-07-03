@@ -13,6 +13,9 @@ type Props = { orientation: MenuProps }
 
 const Menu = ({ orientation }: MenuProps) => {
     const { section, onSetSection } = useNavigation()
+
+    console.log('Menu items:', CHORTEXIA_CONSTANTS.LandingPageMenu)
+
     switch (orientation) {
         case "desktop":
             return (
@@ -27,12 +30,12 @@ const Menu = ({ orientation }: MenuProps) => {
                                 className={cn(
                                     "rounded-xl flex gap-2 py-2 px-4 items-center transition-all",
                                     section == menuItem.path
-                                        ? "bg-slate-700 text-white hover:bg-slate-800"
+                                        ? "bg-slate-600 text-white hover:bg-slate-700"
                                         : "text-muted-foreground hover:bg-muted-foreground/10",
                                 )}
                                 key={menuItem.id}
                             >
-                                {menuItem.icon}
+                                <menuItem.icon />
                                 {menuItem.label}
                             </Link>
                         ))}

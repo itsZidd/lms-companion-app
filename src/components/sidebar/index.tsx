@@ -8,24 +8,25 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { menuOptions } from "@/lib/constant"
+import { DASHBOARD_PAGE_MENU } from "@/constants/menus/dashboard"
 import clsx from "clsx"
 import { Separator } from "../ui/separator"
+import ModeToggle from "../ui/mode-toggle"
 
 type Props = {}
 
 const MenuOptions = (props: Props) => {
     const pathName = usePathname()
     return (
-        <nav className="dark:bg-black h-screen overflow-scroll justify-between flex items-center flex-col gap-10 py-2 px-2">
+        <nav className="bg-slate-100 dark:bg-slate-900 h-screen flex flex-col justify-between py-2 px-2">
             <div className="flex items-center justify-center flex-col gap-8">
                 <Link className="flex font-bold flex-row" href="/">
-                    <p className="rounded-lg border-1 border-b-2 border-r-2 border-slate-700 px-1 py-1 text-xs text-muted-foreground dark:border-white dark:text-white">
-                        Corthexia
+                    <p className="rounded-lg border-2 border-b-4 border-r-3 border-slate-700 px-2 py-2 text-md text-slate-700 dark:border-white dark:text-white">
+                        C.
                     </p>
                 </Link>
                 <TooltipProvider>
-                    {menuOptions.map((menuItem) => (
+                    {DASHBOARD_PAGE_MENU.map((menuItem) => (
                         <ul key={menuItem.name}>
                             <Tooltip delayDuration={0}>
                                 <TooltipTrigger>
@@ -47,7 +48,7 @@ const MenuOptions = (props: Props) => {
                                 </TooltipTrigger>
                                 <TooltipContent
                                     side="right"
-                                    className="font-mono bg-slate-600 text-black dark:text-slate-300 backdrop-blur-xl"
+                                    className="font-mono"
                                 >
                                     <p>{menuItem.name}</p>
                                 </TooltipContent>
@@ -56,6 +57,9 @@ const MenuOptions = (props: Props) => {
                     ))}
                 </TooltipProvider>
                 <Separator />
+            </div>
+            <div className="flex items-center justify-center pb-4">
+                <ModeToggle />
             </div>
         </nav>
     )
