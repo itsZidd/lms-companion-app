@@ -1,33 +1,29 @@
 import { House, CreditCard, Compass } from "lucide-react"
 
 export type LandingMenuItem = {
-    id: number
-    label: string
-    path: string
+    name: string
     icon: React.ElementType
+    href: string
     section?: boolean
 }
 
 export const LANDING_PAGE_MENU: LandingMenuItem[] = [
     {
-        id: 0,
-        label: "Home",
-        path: "/",
+        name: "Home",
         icon: House,
+        href: "/",
         section: true,
     },
     {
-        id: 1,
-        label: "Pricing",
-        path: "/pricing",
+        name: "Pricing",
         icon: CreditCard,
+        href: "/pricing",
         section: true,
     },
     {
-        id: 2,
-        label: "Explore",
-        path: "/explore",
+        name: "Explore",
         icon: Compass,
+        href: "/explore",
         section: true,
     },
 ]

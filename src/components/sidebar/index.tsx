@@ -18,7 +18,7 @@ type Props = {}
 const MenuOptions = (props: Props) => {
     const pathName = usePathname()
     return (
-        <nav className="bg-slate-100 dark:bg-slate-900 h-screen flex flex-col justify-between py-2 px-2">
+        <nav className="bg-slate-100 dark:bg-slate-700 h-screen flex flex-col justify-between py-2 px-2">
             <div className="flex items-center justify-center flex-col gap-8">
                 <Link className="flex font-bold flex-row" href="/">
                     <p className="rounded-lg border-2 border-b-4 border-r-3 border-slate-700 px-2 py-2 text-md text-slate-700 dark:border-white dark:text-white">

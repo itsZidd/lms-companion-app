@@ -23,20 +23,12 @@ const Menu = ({ orientation }: MenuProps) => {
                     <CardContent className="p-0 flex gap-2">
                         {CHORTEXIA_CONSTANTS.LandingPageMenu.map((menuItem) => (
                             <Link
-                                href={menuItem.path}
-                                {...(menuItem.section && {
-                                    onClick: () => onSetSection(menuItem.path),
-                                })}
-                                className={cn(
-                                    "rounded-xl flex gap-2 py-2 px-4 items-center transition-all",
-                                    section == menuItem.path
-                                        ? "bg-slate-600 text-white hover:bg-slate-700"
-                                        : "text-muted-foreground hover:bg-muted-foreground/10",
-                                )}
-                                key={menuItem.id}
+                                key={menuItem.name}
+                                href={menuItem.href}
+                                className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-white/80 hover:text-white"
                             >
-                                <menuItem.icon />
-                                {menuItem.label}
+                                <menuItem.icon className="w-4 h-4" />
+                                <span className="text-sm font-medium">{menuItem.name}</span>
                             </Link>
                         ))}
                     </CardContent>
