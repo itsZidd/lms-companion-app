@@ -10,8 +10,8 @@ import {
 } from "@/components/ui/tooltip"
 import { DASHBOARD_PAGE_MENU } from "@/constants/menus/dashboard"
 import clsx from "clsx"
-import { Separator } from "../ui/separator"
-import ModeToggle from "../ui/mode-toggle"
+import { Separator } from "@/components/ui/separator"
+import ModeToggle from "@/components/ui/mode-toggle"
 
 const MenuOptions = () => {
     const pathName = usePathname()

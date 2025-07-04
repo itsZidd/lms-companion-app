@@ -1,5 +1,5 @@
 import React from "react"
-import Sidebar from "@/components/sidebar"
+import Sidebar from "@/app/(main)/_components/sidebar"
 
 type Props = { children: React.ReactNode }
 

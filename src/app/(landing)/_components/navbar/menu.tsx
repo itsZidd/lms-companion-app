@@ -9,13 +9,9 @@ import Link from "next/link"
 type MenuProps = {
     orientation: "desktop" | "mobile"
 }
-type Props = { orientation: MenuProps }
 
 const Menu = ({ orientation }: MenuProps) => {
     const { section, onSetSection } = useNavigation()
-
-    console.log('Menu items:', CHORTEXIA_CONSTANTS.LandingPageMenu)
-
     switch (orientation) {
         case "desktop":
             return (
@@ -23,12 +19,20 @@ const Menu = ({ orientation }: MenuProps) => {
                     <CardContent className="p-0 flex gap-2">
                         {CHORTEXIA_CONSTANTS.LandingPageMenu.map((menuItem) => (
                             <Link
-                                key={menuItem.name}
+                                key={menuItem.id}
                                 href={menuItem.href}
-                                className="flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-white/80 hover:text-white"
+                                {...(menuItem.section && {
+                                    onClick: () => onSetSection(menuItem.href),
+                                })}
+                                className={cn(
+                                    "rounded-xl flex gap-2 py-2 px-4 items-center transition-all",
+                                    section == menuItem.href
+                                        ? "bg-slate-600 text-white hover:bg-slate-700"
+                                        : "text-muted-foreground hover:bg-muted-foreground/10",
+                                )}
                             >
-                                <menuItem.icon className="w-4 h-4" />
-                                <span className="text-sm font-medium">{menuItem.name}</span>
+                                <menuItem.icon />
+                                {menuItem.name}
                             </Link>
                         ))}
                     </CardContent>
