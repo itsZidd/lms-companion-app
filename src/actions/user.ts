@@ -1,3 +1,5 @@
+"use server"
+
 import { db } from "@/db/client"
 import { eq } from "drizzle-orm"
 import { users, purchasedProjects, projects } from "@/db/schema"

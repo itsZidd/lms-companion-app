@@ -18,7 +18,7 @@ const MenuOptions = () => {
     return (
         <nav className="h-screen flex flex-col justify-between py-2 px-2">
             <div className="flex items-center justify-center flex-col gap-8">
-                <Link className="flex font-bold flex-row" href="/">
+                <Link className="flex flex-row" href="/">
                     <p className="rounded-lg border-2 border-b-4 border-r-3 border-slate-700 px-2 py-2 text-md text-slate-700 dark:border-white dark:text-white">
                         C.
                     </p>
@@ -46,7 +46,6 @@ const MenuOptions = () => {
                                 </TooltipTrigger>
                                 <TooltipContent
                                     side="right"
-                                    className="font-mono"
                                 >
                                     <p>{menuItem.name}</p>
                                 </TooltipContent>
