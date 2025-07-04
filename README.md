@@ -1,6 +1,6 @@
 # LMS Companion App
 
-A Learning Management System companion application built with [Next.js](https://nextjs.org).
+A Learning Management System application built with [Next.js](https://nextjs.org).
 ## Screenshots
 <div align="center">
   <img src="https://github.com/user-attachments/assets/6d6c46e2-f883-495a-9433-d6b5137dd536" alt="Landing Page" width="500">
