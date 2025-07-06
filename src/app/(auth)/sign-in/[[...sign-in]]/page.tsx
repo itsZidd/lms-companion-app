@@ -1,17 +1,6 @@
-import { SignIn } from "@clerk/nextjs";
-
+// Clerk SignIn page removed for migration to new auth provider
+// TODO: Implement your new sign-in page here
 export default function SignInPage() {
-  return (
-    <SignIn
-      appearance={{
-        elements: {
-          // This targets the main text in Clerk forms
-          formFieldInput: "text-slate-400 dark:text-slate-500",
-          // This targets labels and other text
-          formFieldLabel: "text-slate-400 dark:text-slate-500",
-          // You can add more Clerk element keys as needed
-        },
-      }}
-    />
-  );
+  // Replace with your new sign-in component
+  return null;
 }

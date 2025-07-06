@@ -80,8 +80,8 @@ Create a `.env` file in the root directory with the following variables:
 DATABASE_URL=
 
 # Authorization (clerk)
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
+# NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY= # removed
+# CLERK_SECRET_KEY= # removed
 ```
 
 ## Database
@@ -131,3 +131,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Support
 
 If you encounter any issues or have questions, please [open an issue](https://github.com/itsZidd/lms-companion-app/issues) on GitHub.
+
+# Clerk mention removed for migration to new auth provider
+# TODO: Add documentation for your new auth provider here

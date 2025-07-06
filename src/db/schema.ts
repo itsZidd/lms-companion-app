@@ -9,7 +9,7 @@ import {
 
 export const users = pgTable("users", {
     id: uuid("id").primaryKey().defaultRandom(), // gen_random_uuid()
-    clerkId: varchar("clerkId", { length: 255 }).unique(),
+    // clerkId: varchar("clerkId", { length: 255 }).unique(), // removed
     name: varchar("name", { length: 255 }),
     email: varchar("email", { length: 255 }).unique(),
     profileImage: text("profileImage"),

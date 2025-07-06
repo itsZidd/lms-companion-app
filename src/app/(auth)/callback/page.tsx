@@ -1,14 +1,8 @@
-import { onAuthenticateUser } from '@/actions/user';
-import { redirect } from 'next/navigation';
+// Clerk authentication callback logic removed for migration to new auth provider
 
-const AuthCallbackPage = async () => {
-    const auth = await onAuthenticateUser();
-
-    if (auth.status === 200 || auth.status === 201) {
-        redirect('/dashboard');
-    } else if (auth.status === 403 || auth.status === 400 || auth.status === 500) {
-        redirect('/sign-in');
-    }
+// TODO: Implement new authentication callback logic here
+export default function AuthCallbackPage() {
+    // This page previously handled Clerk auth callback and user creation.
+    // Replace with your new auth provider's logic.
+    return null;
 }
-
-export default AuthCallbackPage

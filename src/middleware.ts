@@ -1,12 +1,11 @@
-import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server"
+// Clerk middleware removed for migration to new auth provider
+// TODO: Implement new middleware for your chosen authentication system
+import { NextResponse } from "next/server"
 
-const isPublicRoute = createRouteMatcher(["/sign-in(.*)", "/sign-up(.*)"])
-
-export default clerkMiddleware(async (auth, req) => {
-    if (!isPublicRoute(req)) {
-        await auth.protect()
-    }
-})
+export function middleware() {
+    // No-op middleware for now
+    return NextResponse.next()
+}
 
 export const config = {
     matcher: [

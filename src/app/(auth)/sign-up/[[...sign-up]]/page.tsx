@@ -1,13 +1,8 @@
-import { SignUp } from "@clerk/nextjs";
-import React from 'react'
-
-
+// Clerk SignUp page removed for migration to new auth provider
+// TODO: Implement your new sign-up page here
 const Signup = () => {
-    return (
-        <div><SignUp />
-
-        </div>
-    )
+    // Replace with your new sign-up component
+    return null;
 }
 
 export default Signup
